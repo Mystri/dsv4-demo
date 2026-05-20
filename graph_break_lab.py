@@ -4,7 +4,7 @@ import os
 os.environ["TORCH_LOGS"] = "graph_breaks"
 
 @torch.compile
-def fn(x):
+def break_if(x):
     if x.sum() > 0:      # 隐式 .item()
         return x * 2
     return x
