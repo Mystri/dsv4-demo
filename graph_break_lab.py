@@ -11,4 +11,4 @@ def break_if(x):
 
 break_if(torch.randn(3))
 
-torch._dynamo.explain(fn)(x)
+torch._dynamo.explain(break_if)(x)
