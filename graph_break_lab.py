@@ -9,6 +9,6 @@ def break_if(x):
         return x * 2
     return x
 
-break_if(torch.randn(3))
+x = torch.randn(3)
 
 torch._dynamo.explain(break_if)(x)
