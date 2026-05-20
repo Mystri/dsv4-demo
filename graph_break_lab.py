@@ -11,4 +11,5 @@ def break_if(x):
 
 x = torch.randn(3)
 
-torch._dynamo.explain(break_if)(x)
+explanation = torch._dynamo.explain(break_if)(x)
+print(explanation)
